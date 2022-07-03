@@ -11,7 +11,7 @@ const StackScreen = () => {
     <Stack.Navigator screenOptions={{
         headerShown:false
     }}>
-      <Stack.Screen name="Home" component={Bottomtab}/>
+      <Stack.Screen name="HomeScreen" component={Bottomtab}/>
       <Stack.Screen name="Details" component={DetailScreen} options={{
         headerShown:true
       }}/>
