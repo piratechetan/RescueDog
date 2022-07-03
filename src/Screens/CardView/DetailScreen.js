@@ -5,7 +5,7 @@ import MobStyle from './MobStyle'
 
 const DetailScreen = ({navigation}) => {
   return (
-    <View>
+    <View style={{flex:1}}>
     {Platform.OS === 'web' ?
     <WebStyle/> : <MobStyle/> }
     </View>

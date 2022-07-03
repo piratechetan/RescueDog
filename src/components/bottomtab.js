@@ -2,8 +2,9 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Home from '../Screens/Home';
-import { AntDesign,Feather } from '@expo/vector-icons'; 
+import { AntDesign,Feather,FontAwesome5,Entypo } from '@expo/vector-icons'; 
 import Settings from '../Screens/settings/index';
+import Rescue from '../Screens/Rescue/Rescue';
 const Tab = createMaterialBottomTabNavigator();
 
 
@@ -19,7 +20,12 @@ const Bottomtab = () => {
       }}>
       <Tab.Screen name="Home" component={Home} options={{
         tabBarIcon:({color})=>(
-            <AntDesign name="home" size={24} color={color} />
+            <Entypo name="home" size={24} color={color} />
+        )
+      }}/>
+      <Tab.Screen name='Rescue' component={Rescue} options={{
+        tabBarIcon:({color})=>(
+          <FontAwesome5 name="hands-helping" size={24} color={color} />
         )
       }}/>
       <Tab.Screen name='Settings' component={Settings} options={{
@@ -27,6 +33,7 @@ const Bottomtab = () => {
             <Feather name="settings" size={24} color={color} />
         )
       }}/>
+
       
     </Tab.Navigator>
   )

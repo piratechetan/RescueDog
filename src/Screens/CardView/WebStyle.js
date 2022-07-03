@@ -5,6 +5,7 @@ import { Image,Text,View } from 'native-base'
 import { Foundation } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
+import Carousel from 'react-native-snap-carousel';
 const {width,height} = Dimensions.get('window')
 const WebStyle = () => {
     const route = useRoute();
@@ -53,7 +54,7 @@ const WebStyle = () => {
                 </View>
             </View>
         </View>    
-        <View style={{flexDirection:'row'}}>
+        <View style={{flexDirection:'row',marginTop:20}}>
           <TouchableOpacity style={{paddingVertical:18,width:'30%',backgroundColor:'blue',alignItems:'center',justifyContent:'center',borderRadius:15}}>
             <Text style={{color:'white'}}>Adopt Me</Text>
           </TouchableOpacity>
